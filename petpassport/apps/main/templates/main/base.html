@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">PetPassport</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="{% url 'home' %}">Главная</a>
+            <a class="p-2 text-dark" href="{% url 'create_record' %}">Создать запись</a>
+            <a class="p-2 text-dark" href="{% url 'about' %}">О нас</a>
+        </nav>
+        <a class="btn btn-outline-primary" href="#">Sign up</a>
+        </div>
+
+        <div class="container">
+        {% block content %} {% endblock %}
+        </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2020-2020 PetPassport</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Хелп</a></li>
+        </ul>
+      </footer>
+
+</body>
+</html>
